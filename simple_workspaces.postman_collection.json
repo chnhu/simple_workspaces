@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "e15c0ca0-7897-4a0a-bfe4-52070f58bdf2",
+		"name": "simple_workspaces",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5529479"
+	},
+	"item": [
+		{
+			"name": "Get list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/workspaces",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"workspaces"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get workspace",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/workspace/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"workspace",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create workspace",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"workspaceName\": \"workspace_001\",\n    \"description\": \"This is a testing data\",\n    \"workspaceStatusId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/workspaces",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"workspaces"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update workspace",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"workspaceId\": 1,\n    \"workspaceStatusId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/workspace/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"workspace",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

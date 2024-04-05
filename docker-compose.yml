@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  workspaces-db:
+    image: postgres:13
+    ports:
+      - "25432:5432"
+    volumes:
+      - ./docker/postgres/:/docker-entrypoint-initdb.d
+    container_name: workspaces-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      TZ: Asia/Ho_Chi_Minh
